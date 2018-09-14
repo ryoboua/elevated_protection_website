@@ -32,10 +32,17 @@ h2 {
   margin-left: 2em;
 }
 
+.mobile {
+  font-family: airborne;
+  font-size: 1.5em; 
+  text-align: left;
+  margin-left: 0.5em;
+
+}
+
 p {
   font-family: oswald;
   font-size: 1.5em;
-
 }
 @font-face {
   font-family: airborne;
@@ -45,5 +52,14 @@ p {
 @font-face {
   font-family: oswald;
   src: url(./fonts/Oswald-Regular.ttf);
+}
+
+.slick-prev {
+  left: 3% !important;
+  z-index: 1;
+}
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
 }
 
