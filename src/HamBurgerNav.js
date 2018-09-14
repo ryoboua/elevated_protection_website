@@ -13,12 +13,11 @@ class HamBurgerNav extends Component {
       };
     
       handleClick = event => {
-        console.log(event.currentTarget)
         this.setState({ anchorEl: event.currentTarget });
       };
     
       handleClose = () => {
-        this.setState({ anchorEl: false });
+        this.setState({ anchorEl: null });
       };
 
     render() {
@@ -27,14 +26,13 @@ class HamBurgerNav extends Component {
 
         return (
             <div>
-                <AppBar position="static">
+                <AppBar>
                     <Toolbar style={{background: 'black'}} >
                         <IconButton color="inherit" aria-label="Menu" onClick={this.handleClick}>
                             <MenuIcon
                                 aria-owns={anchorEl ? 'simple-menu' : null}
                                 aria-haspopup="true"
-                            />
-                            
+                            /> 
                         </IconButton>
                     </Toolbar>
                 </AppBar>

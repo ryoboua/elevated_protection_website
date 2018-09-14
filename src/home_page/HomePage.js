@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Nav from './Nav'
 import logo from './logo.jpg'
+import logoMobile from './logoMobile.jpg'
 
 const homePageStyle = { 
     margin: '0',
@@ -25,7 +26,13 @@ class HomePage extends Component {
         return (
             <div  style={ homePageStyle } >
                 <div>
-                    <img src={logo} alt="Elevated Protection" style={{height: '450px', width: '346px', marginTop: '50px'}} />
+                    <img 
+                      src={logo}
+                      alt="Elevated Protection" 
+                      style={{marginTop: '50px'}}
+                      srcSet={`${logoMobile} 318w, ${logo} 612w`}
+                      sizes="(max-width: 750px) 320px, (min-width: 768px) 346px"
+                    />
                     <Nav navOpacity={this.state.navOpacity} />
                 </div>
             </div>

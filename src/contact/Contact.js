@@ -21,6 +21,9 @@ class Contact extends Component {
                             fsdf asf sdf
                             a sdf sdf as 
                         </p>
+                        <button>
+                            Work + Shelter
+                        </button>
                     </section>
                 </div>
             </div>

@@ -5,8 +5,8 @@ import Product from '../product_page/Product'
 class App extends Component {
   render() {
     return (
-      <HomePage />
-      //<Product />
+      //<HomePage />
+      <Product />
       //<Contact />
     );
   }
