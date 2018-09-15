@@ -1,8 +1,13 @@
 import React from 'react';
 import Media from "react-media";
+import { Link } from 'react-router-dom';
 
-const Nav = ({...props, navOpacity}) => {
-    const navOptions = ['Product', 'Info', 'Contact'];
+const Nav = ({navOpacity}) => {
+    const navOptions = [
+    { title: 'Products', url: '/products' },
+    { title: 'Info', url: '/info' },
+    { title: 'Contact', url: '/contact' }
+    ]
     const menuItems = {
         padding: '0 1em',
         color: 'white',
@@ -19,9 +24,12 @@ const Nav = ({...props, navOpacity}) => {
         
         <div className="navStyle" style={ navStyle(direction, opacity)} >
                 {navOptions.map( item => (
-                    <h1 key={item} style={ {...menuItems, fontSize } }>
-                        {item}
-                    </h1>
+                    
+                        <h1 key={item} style={ {...menuItems, fontSize } }>
+                        <Link style={{ textDecoration: 'none', color: 'white' }} to={item.url} >
+                            {item.title}
+                        </Link>
+                        </h1>
                 ))}
         </div>
     )

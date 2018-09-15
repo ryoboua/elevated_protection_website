@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import HamBurgerNav from '../HamBurgerNav';
 
-
-
 const homePageStyle = { 
     margin: '0',
     height: '100%',
@@ -19,11 +17,8 @@ class Contact extends Component {
                 <HamBurgerNav/>
                     <h1 className="main-header" >Contact</h1>
                     <section>
-                        <p>
-                            fsdf asf sdf
-                            a sdf sdf as 
-                        </p>
-
+                        <p>Elevated Protection Limited 2 Rolland Rd., Toronto, ON Canada M4G 1V5</p>
+                        <p>info@elevatedprotection.ca</p>
                     </section>
                 </div>
             </div>

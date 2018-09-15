@@ -115,7 +115,7 @@ class MobileView extends Component {
         )
     }
 }
-const TechFeatures = ({...props, data}) => {
+const TechFeatures = ({ data }) => {
   
   return (
     <div>
@@ -136,7 +136,7 @@ const TechFeatures = ({...props, data}) => {
     </div>
   )
 }
-const Message = ({...props, open, handleClose}) => {
+const Message = ({ open, handleClose }) => {
     return (
         <Dialog
           open={open}

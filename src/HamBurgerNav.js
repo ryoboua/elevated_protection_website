@@ -5,6 +5,8 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import { Link } from 'react-router-dom';
+
 
 
 class HamBurgerNav extends Component {
@@ -21,7 +23,12 @@ class HamBurgerNav extends Component {
       };
 
     render() {
-        const menuItems = ['Home','Product','Info','Contact'];
+        const menuItems = [
+            { title: 'Home', url: '/' },
+            { title: 'Products', url: '/products' },
+            { title: 'Info', url: '/info' },
+            { title: 'Contact', url: '/contact' }
+        ];
         const { anchorEl } = this.state;
 
         return (
@@ -41,8 +48,19 @@ class HamBurgerNav extends Component {
                   anchorEl={anchorEl}
                   open={Boolean(anchorEl)}
                   onClose={this.handleClose}
+                  disableAutoFocusItem="false"
                 >
-                    {menuItems.map( (item, index) => <MenuItem key={index} onClick={this.handleClose}><p>{item}</p></MenuItem>)}
+                    {menuItems.map( (item, index) => ( 
+                            <Link style={{ textDecoration: 'none', color: 'black', borderStyle: 'none' }} to={item.url} >
+                                <MenuItem 
+                                key={index} 
+                                onClick={this.handleClose}
+                                >
+                                    <p>{item.title}</p>
+                                </MenuItem>
+                            </Link>
+                                )
+                                )}
                 </Menu>
             </div>
         )

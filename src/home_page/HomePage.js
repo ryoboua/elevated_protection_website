@@ -18,7 +18,7 @@ class HomePage extends Component {
 
     componentDidMount(){
         setTimeout(() => {
-            this.setState({ navOpacity: 0.75 })
+            this.setState({ navOpacity: 0.75, homePageVisited: true })
         }, 1500)
     }
 
