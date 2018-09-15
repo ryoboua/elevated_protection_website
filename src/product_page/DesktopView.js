@@ -26,7 +26,7 @@ class DesktopView extends Component {
         return (
             <div  style={ productDesktopStyle } >
                     <HamBurgerNav/>
-                    <h1 style={{marginTop: '175px'}} >Products</h1>
+                    <h1 className="main-header">Products</h1>
                     <section>
                         <h2>Mouth Guard</h2>
                         <Carousel images={blackMouthGuardDesktop} />

@@ -40,6 +40,10 @@ h2 {
 
 }
 
+.main-header {
+  margin-top: 175px;
+}
+
 p {
   font-family: oswald;
   font-size: 1.5em;
