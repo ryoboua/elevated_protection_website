@@ -72,6 +72,11 @@ const productMobileStyle = {
 }
 
 class MobileView extends Component {
+    // componentDidMount(){
+    //     window.onresize = () => {
+    //         console.log('im moving')
+    //     }
+    // }
     render() {
         return(
             <div style={ productMobileStyle }>
@@ -91,15 +96,17 @@ class MobileView extends Component {
                     <br />
                     <br />
                     <div style={{width: '100%', margin: '0 auto'}} >
+                    {console.log(window.innerWidth)}
                         <img 
                           src={softShellImage.mobile} 
                           alt={softShellImage.title} 
                           srcSet={ `${softShellImage.mobile} 720w` }
+                          //if the viewport is 501px wide or wider, image width is 500px
+                          // if the viewport width is 500px wide or less, image width will have device width.
+                          //When on a desktop window.innerWidth gets initialize 
                           sizes= {` 
-                                (max-width: 329px) 320px,
-                                (max-width: 376px) 375px,
-                                (max-width: 426px) 425px, 
-                                (min-width: 430px) 500px,
+                                (min-width: 501px) 500px, 
+                                (max-width: 500px) ${window.innerWidth > 500 ? '300' : window.innerWidth}px,
                                 `}
                           height="auto" 
                         />
@@ -113,11 +120,11 @@ class MobileView extends Component {
                           src={T_ShirtImages.mobile}
                           alt={T_ShirtImages.title}
                           srcSet={ `${T_ShirtImages.mobile} 415w, ${T_ShirtImages.tablet} 518w` }
+                          //if the viewport is 501px wide or wider, image width is 500px
+                          // if the viewport width is 500px wide or less, image width will have device width
                           sizes={`
-                                (max-width: 329px) 320px,
-                                (max-width: 376px) 375px,
-                                (max-width: 426px) 425px, 
-                                (min-width: 430px) 500px,
+                                (min-width: 501px) 500px, 
+                                (max-width: 500px) ${window.innerWidth > 500 ? '300' : window.innerWidth}px,
                                 `}
                           height="auto" 
                         />
@@ -150,8 +157,8 @@ const Carousel = ({ images }) => {
                                         src={image.mobile}
                                         srcSet={ `${image.mobile} 461w, ${image.tablet} 768w` }
                                         sizes={`
-                                            (max-width: 426px) ${window.screen.availWidth}px,
-                                            (min-width: 430px) ${window.screen.availWidth}px,
+                                            (max-width: 426px) ${window.innerWidth}px,
+                                            (min-width: 430px) ${window.innerWidth}px,
                                             `}
                                         alt={image.title} 
                                         key={image.title} 

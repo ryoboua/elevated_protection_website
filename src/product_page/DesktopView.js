@@ -75,10 +75,13 @@ const Carousel = ({ images }) => {
         return (
             <div style={{width, textAlign: "center", margin: '75px auto'}} >
                 <Slider {...settings}>
-                    {images.map(image => <img 
+                    {images.map( image => <img 
                                             src={image} 
                                             width="auto" 
-                                            height="auto" />)}
+                                            height="auto" 
+                                          />
+                                )
+                        }
                 </Slider>
             </div>
         )
