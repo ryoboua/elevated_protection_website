@@ -18,7 +18,7 @@ class HomePage extends Component {
 
     componentDidMount(){
         setTimeout(() => {
-            this.setState({ navOpacity: 0.75, homePageVisited: true })
+            this.setState({ navOpacity: 0.75 })
         }, 1500)
     }
 
@@ -33,8 +33,8 @@ class HomePage extends Component {
                       srcSet={`${logoMobile} 318w, ${logo} 612w`}
                       sizes="(max-width: 750px) 320px, (min-width: 768px) 346px"
                     />
-                    <Nav navOpacity={this.state.navOpacity} />
                 </div>
+                <Nav navOpacity={this.state.navOpacity} />
             </div>
         )
     }

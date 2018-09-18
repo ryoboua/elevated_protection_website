@@ -17,7 +17,8 @@ class Contact extends Component {
                 <HamBurgerNav/>
                     <h1 className="main-header" >Contact</h1>
                     <section>
-                        <p>Elevated Protection Limited 2 Rolland Rd., Toronto, ON Canada M4G 1V5</p>
+                        <p>Elevated Protection Limited</p>
+                        <p>2 Rolland Rd., Toronto, ON Canada M4G 1V5</p>
                         <p>info@elevatedprotection.ca</p>
                     </section>
                 </div>

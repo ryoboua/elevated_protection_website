@@ -7,7 +7,7 @@ import DesktopView from './DesktopView';
 class Product extends Component {
     render(){
         return (
-            <Media query="(max-width: 750px)">
+            <Media query="(max-width: 769px)">
                 { matches => matches ?  <MobileView /> : <DesktopView /> }
             </Media>
         )

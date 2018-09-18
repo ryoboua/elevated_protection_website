@@ -19,6 +19,7 @@ const Nav = ({navOpacity}) => {
         flexDirection: `${direction}`,
         opacity,
         transition: 'all 3s',
+        background: 'black',
     })
     const nav = (direction = 'column', opacity, fontSize) => (
         

@@ -1,26 +1,18 @@
 //node modules
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import Divider from '@material-ui/core/Divider';
-import Paper from '@material-ui/core/Paper';
-
+import WorkShelter from '../work_shelter/WorkShelter'
 //components
 import HamBurgerNav from '../HamBurgerNav';
 
 //images
 import diagram from './Diagram.jpg';
-import workShelter from './work_shelter.jpg';
 import bomb from './bomb.jpg';
 import chomp from './chomp.jpg';
 import glove from './glove.jpg';
 import vtech from './vtech.jpg';
-let poop = glove;
-let planet = glove;
+import poop from './poop.png';
+import planet from './planet.png';
 
 const text = {
   bomb: 'Hard Copolymer TPE coats the outer side of the mouthguard to offer the most proctection in high impact situations.',
@@ -89,7 +81,7 @@ class DesktopView extends Component {
                 <HamBurgerNav />
                 <h1 className="main-header" >Info</h1>
                 <section>
-                  <h2>Why Elevated proctection?</h2>
+                  <h2>Why Elevated Protection?</h2>
                   <div style={{width: window.screen.availWidth > 1441 ? '60%' : '70%', textAlign: "center", margin: '75px auto'}} >
                     <img src={diagram} width="auto" height="420" />
                   </div>
@@ -104,11 +96,7 @@ class DesktopView extends Component {
                   <TechFeatures data={data} />
                 </section>
                 <section>
-                  <div style={{display: 'flex', justifyContent: 'flex-end', marginRight: '2em', marginTop: '1em'}} >
-                    <p style={{marginRight: '1em'}} >Elevated Proctection is proud to work with </p>
-                    <img src={workShelter} height="100" width="100" onClick={this.handleClickOpen} />
-                    <Message open={this.state.open} handleClose={this.handleClose}  />
-                  </div>
+                  <WorkShelter buttonMode />
                 </section>
 
             </div>
@@ -131,30 +119,6 @@ const TechFeatures = ({...props, data}) => {
       </ul>
     </div>
   )
-}
-const Message = ({...props, open, handleClose}) => {
-    return (
-        <Dialog
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
-        >
-        <DialogTitle id="alert-dialog-title"><p>Work + Shelter and Elevated Proctection</p></DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            <p>
-               Work + Shelter is an ethical factory that employs impoverished women in New Delhi, India. By buying our products, you give our employees an economic agency that affords them more coutrol and dignity in their lives.
-            </p>
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary" autoFocus>
-            Close
-          </Button>
-        </DialogActions>
-        </Dialog>
-    )
 }
 
 export default DesktopView;
