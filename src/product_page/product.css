@@ -1,0 +1,71 @@
+
+/* Desktop Styling */
+.container {
+    margin: 0;
+    height: 100%;
+    padding: 0; 
+    width: 100%;
+    background: white;
+    text-align: center;
+}
+.secondary-header {
+    font-size: 2em; 
+    text-align: left;
+    margin-left: 2em;
+}
+
+.soft-shell-container {
+    width: 720px;
+    text-align: center;
+    margin: 75px auto;
+}
+
+.tee-container {
+    width: 800px;
+    text-align: center; 
+    margin: 25px auto;
+}
+
+.slider-container {
+    text-align: center;
+    margin: 75px auto;
+}
+
+/* Mobile styling */
+
+.container-mobile {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+    background: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.secondary-header-mobile {
+    font-size: 1.5em; 
+    text-align: left;
+    margin-left: 0.5em;
+    text-decoration: none;
+}
+
+.mobile-image-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.address {
+    padding-bottom: 1em;
+    font-size: 1em;
+}
+
+ /* css carousel fix */
+.slick-prev {
+    left: 3% !important;
+    z-index: 1;
+  }
+  .slick-next {
+    right: 3% !important;
+    z-index: 1;
+  }

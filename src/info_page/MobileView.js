@@ -13,8 +13,9 @@ import bomb from './images/bomb.jpg';
 import chomp from './images/chomp.jpg';
 import glove from './images/glove.jpg';
 import vtech from './images/vtech.jpg';
-let poop = glove;
-let planet = glove;
+import poop from './images/poop.png';
+import planet from './images/planet.png';
+
 
 const text = {
   bomb: 'Hard Copolymer TPE coats the outer side of the mouthguard to offer the most proctection in high impact situations.',
@@ -68,15 +69,15 @@ class MobileView extends Component {
 
     render() {
         return (
-            <div style={infoDesktopStyle} >
+            <div className="container">
                 <HamBurgerNav />
-                <h1 style={{marginTop: '2em'}} >Info</h1>
-                <section stlye={{textAlign: 'center'}} >
+                <h1 className="main-header-mobile">Info</h1>
+                <section>
                   <h2 className="header_info_mobile" >Why Elevated Protection?</h2>
-                    <div style={{width: '100%', margin: '0 auto'}} >
+                    <div className="diagram-image-mobile" >
                         <img src={diagram} width={window.innerWidth > 500 ? '440' : window.innerWidth} height="auto" alt="Diagram of ep mouthguard" />
                     </div>
-                  <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}} >
+                  <div className="single-line">
                     {data.map( (d, index) => <img key={index} src={d.url} height='30px' alt={d.title} /> )}
                   </div>
                 </section>
@@ -99,9 +100,9 @@ const TechFeatures = ({ data }) => {
     <div>
       <h2 className="header_info_mobile" >Tech/Features</h2>
         {data.map((d, i) => (
-              <div key={i} style={{ textAlign: 'center' }} >
-                <h2 style={{ fontSize: '1em', marginLeft: '0.5em'  }} >{d.title}</h2>
-                <p style={{fontSize: '1em'}} >{d.text}</p>
+              <div className="textAlignCenter" key={i}>
+                <h2 className="sub-header-mobile">{d.title}</h2>
+                <p className="fontSize">{d.text}</p>
               </div>
         ))}
     </div>

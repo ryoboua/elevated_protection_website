@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
 import HamBurgerNav from '../hamburger_nav/HamBurgerNav';
 
-
-const homePageStyle = { 
-    margin: '0',
-    height: '100%',
-    padding: '0', 
-    width: '100%', 
-    background: 'white',
-    textAlign: 'center',
-}
 class Contact extends Component {
     render() {
         return (
-            <div  style={ homePageStyle } >
+            <div className="container">
                 <HamBurgerNav />
                 <div>
                     <h1 className="main-header" >Contact</h1>

@@ -54,14 +54,6 @@ const data = [
   }
 ]
 
-const infoDesktopStyle = { 
-  margin: '0',
-  height: '100%',
-  padding: '0', 
-  width: '100%', 
-  background: 'white',
-  textAlign: 'center',
-}
 class DesktopView extends Component {
     state = {
         open: false,
@@ -76,17 +68,16 @@ class DesktopView extends Component {
         this.setState({ open: false });
       };
     render() {
-      console.log(this.state.screenWidth)
         return (
-            <div style={infoDesktopStyle} >
+            <div className="container">
                 <HamBurgerNav />
                 <h1 className="main-header" >Info</h1>
                 <section>
-                  <h2>Why Elevated Protection?</h2>
-                  <div style={{textAlign: "center", margin: '55px auto'}} >
+                  <h2 className="secondary-header" >Why Elevated Protection?</h2>
+                  <div className="diagram-image">
                     <img src={diagram} alt="Mouthguard Diagram" width="765" height="auto" />
                   </div>
-                  <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}} >
+                  <div className="single-line">
                     {data.map( (d, index) => <img key={index} src={d.url} alt="" height='100px' /> )}
                   </div>
                 </section>
@@ -108,15 +99,15 @@ const TechFeatures = ({ data }) => {
   
   return (
     <div>
-      <h2>Tech/Features</h2>
+      <h2 className="secondary-header" >Tech/Features</h2>
         {data.map((d, i) => (
               <div key={i} className="grid-container">
                 <div className="image">
                 <img src={d.url} height="100" width="105" alt="" />
                 </div>
-                <div className="text" style={{}} >
-                <h2 style={{marginLeft: '0em'}} >{d.title}</h2>
-                <p style={{marginRight: '2em'}} >{d.text}</p>
+                <div className="text">
+                  <h2 className="underline">{d.title}</h2>
+                  <p className="marginRight2em">{d.text}</p>
                 </div>
               </div>
         ))}

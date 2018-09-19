@@ -1,0 +1,18 @@
+.nav {
+    display: flex; 
+    justify-content: center; 
+    transition: all 3s;
+    background: black;
+}
+
+.menu-item {
+    padding: 0 1em;
+    color: white;
+    text-decoration: none; 
+}
+
+
+.link {
+    text-decoration: none;
+    color: white;
+}

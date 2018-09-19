@@ -1,0 +1,62 @@
+
+.secondary-header {
+        font-size: 2em; 
+        text-align: left;
+        margin-left: 2em;
+        text-decoration: underline;
+}
+
+.diagram-image {
+    text-align: center;
+    margin: 55px auto;
+}
+
+.diagram-image-mobile {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.single-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.marginRight2em {
+    margin-right: 2em;
+}
+
+.textAlignCenter {
+    text-align: center;
+}
+
+.sub-header-mobile {
+    font-size: 1em;
+    margin-left: 0.5em;
+}
+.fontSize {
+    font-size: 1em;
+}
+
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr;
+    grid-gap: 1px 1px;
+    grid-template-areas: "image text";
+  }
+  
+  .image { 
+    grid-area: image;
+    margin-top: 28px;
+  }
+  
+  .text { 
+    grid-area: text;
+    text-align: justify;
+   }

@@ -3,7 +3,7 @@ import Media from "react-media";
 import MobileView from './MobileView';
 import DesktopView from './DesktopView';
 
-
+import './info_page.css'
 
 class InfoPage extends Component {
     render(){

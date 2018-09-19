@@ -1,0 +1,14 @@
+.appbar {
+    background: black;
+}
+
+.icon {
+    margin: auto;
+    padding-right: 3%;
+}
+
+.ham-link {
+    text-decoration: none;
+    color: black;
+    border-style: none;
+}

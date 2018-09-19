@@ -1,0 +1,19 @@
+.container_homepage { 
+    margin: 0;
+    padding: 0;
+    background: black;
+    text-align: center;
+    height: 100%;
+
+}
+
+.slogan {
+    color: white;
+    transition: all 2.5s;
+    background: black;
+    padding-bottom: 1em;
+}
+
+.logo {
+   margin-top: 0px;
+}

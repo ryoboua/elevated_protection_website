@@ -1,0 +1,16 @@
+.button-mode {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2em;
+    margin-top: 1em;
+}
+
+.message-mode {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.work-p {
+    margin-right: 1em;
+}

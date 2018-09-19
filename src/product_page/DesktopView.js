@@ -45,42 +45,34 @@ const softShellImage = {
     url: SoftShell
 }
 
-const productDesktopStyle = { 
-    margin: '0',
-    height: '100%',
-    padding: '0', 
-    width: '100%', 
-    background: 'white',
-    textAlign: 'center',
-}
-
 class DesktopView extends Component {
     render() {
         return (
-            <div  style={ productDesktopStyle } >
+            <div className="container">
                     <HamBurgerNav />
                     <h1 className="main-header">Products</h1>
                     <section>
-                        <h2 style={{textDecoration: 'none'}} >Mouthguards</h2>
+                        <h2 className="secondary-header">Mouthguards</h2>
                         <Carousel images={blackMouthguardImages} />
                         <Carousel images={whiteMouthgaurdImages} />
                         <br />
                         <Divider />
                         <br />
-                        <h2 style={{textDecoration: 'none'}} >Soft Shell Carrying Case</h2>
-                        <div style={{width: '720px', textAlign: "center", margin: '75px auto'}} >
+                        <h2 className="secondary-header">Soft Shell Carrying Case</h2>
+                        <div className="soft-shell-container">
                             <img src={softShellImage.url} width="720" height="auto" alt={softShellImage.title} />
                         </div>
                         <WorkShelter />
                         <br />
                         <Divider />
                         <br />
-                        <h2 style={{textDecoration: 'none'}} >Icon Tee</h2>
-                        <div style={{width: '800px', textAlign: "center", margin: '25px auto'}} >
+                        <h2 className="secondary-header">Icon Tee</h2>
+                        <div className="tee-container">
                             <img src={TeeImage.url} width="800" height="auto" alt={TeeImage.title} />
                         </div>
                     </section>
-                    <section style={{paddingBottom: '1em'}} >
+                    <br />
+                    <section>
                         <p>Elevated Protection Limited</p>
                         <p>2 Rolland Rd., Toronto, ON Canada M4G 1V5</p>
                         <p>info@elevatedprotection.ca</p>
@@ -103,7 +95,7 @@ const Carousel = ({ images }) => {
             arrows: true,
         }
         return (
-            <div style={{width, textAlign: "center", margin: '75px auto'}} >
+            <div className="slider-container" style={{ width }} >
                 <Slider {...settings}>
                     {images.map( (image, i) => <img 
                                             src={image.url} 

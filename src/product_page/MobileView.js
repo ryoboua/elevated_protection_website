@@ -4,7 +4,6 @@ import Divider from '@material-ui/core/Divider';
 import HamBurgerNav from '../hamburger_nav/HamBurgerNav';
 import WorkShelter from '../work_shelter/WorkShelter'
 
-
 // images
 import SoftShell from './images/mobile/SoftShell.jpg'
 
@@ -60,26 +59,14 @@ const softShellImage = {
     mobile: SoftShell
 }
 
-//////
-const productMobileStyle = {
-    margin: '0',
-    height: '100%',
-    padding: '0', 
-    width: '100%', 
-    background: 'white',
-    textAlign: 'center',
-    display: 'flex',
-    flexDirection: 'column',
-}
-
 class MobileView extends Component {
     render() {
         return(
-            <div style={ productMobileStyle }>
+            <div className="container">
                 <HamBurgerNav />
-                <h1 style={{marginTop: '2em'}} >Products</h1>
+                <h1 className="main-header-mobile">Products</h1>
                 <section>
-                    <h2  className="mobile"  style={{textDecoration: 'none'}} >Mouthguards</h2>
+                    <h1 className="secondary-header-mobile">Mouthguards</h1>
                     <Carousel images={blackMouthguardImages} />
                     <br />
                     <br />
@@ -88,10 +75,10 @@ class MobileView extends Component {
                     <br />
                     <Divider />
                     <br />
-                    <h2 className="mobile" style={{textDecoration: 'none'}} >Soft Shell Carrying Case</h2>
+                    <h1 className="secondary-header-mobile">Soft Shell Carrying Case</h1>
                     <br />
                     <br />
-                    <div style={{width: '100%', margin: '0 auto'}} >
+                    <div className="mobile-image-container">
                         <img 
                           src={softShellImage.mobile} 
                           alt={softShellImage.title} 
@@ -108,10 +95,10 @@ class MobileView extends Component {
                         />
                     </div>
                     <WorkShelter />
-                    <h2 className="mobile" style={{textDecoration: 'none'}} >Icon Tee</h2>
+                    <h1 className="secondary-header-mobile">Icon Tee</h1>
                     <br />
                     <br />
-                    <div style={{width: '100%', margin: '0 auto'}} >
+                    <div className="mobile-image-container">
                         <img 
                           src={T_ShirtImages.mobile}
                           alt={T_ShirtImages.title}
@@ -124,7 +111,7 @@ class MobileView extends Component {
                         />
                     </div>
                 </section>
-                <section style={{paddingBottom: '1em', fontSize: '1em'}} paddingBottom >
+                <section className="address">
                     <p>Elevated Protection Limited</p>
                     <p>2 Rolland Rd., Toronto, ON Canada M4G 1V5</p>
                     <p>info@elevatedprotection.ca</p>

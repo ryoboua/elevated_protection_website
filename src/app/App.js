@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div style={{margin: '0',height: '100%', padding: '0', width: '100%', }} >
+        <div className="route-container">
           <Route exact path='/' component={HomePage} />
           <Route path='/products' component={Product} />
           <Route path='/info' component={InfoPage} />

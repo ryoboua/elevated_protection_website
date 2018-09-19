@@ -3,6 +3,7 @@ import Media from "react-media";
 import MobileView from './MobileView';
 import DesktopView from './DesktopView';
 
+import './product.css'
 
 class Product extends Component {
     render(){
