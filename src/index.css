@@ -22,7 +22,8 @@ html {
 }
 h1 {
   font-family: airborne;
-  font-size: 2.5em; 
+  font-size: 2.5em;
+  text-decoration: underline; 
 }
 
 h2 {
@@ -30,6 +31,15 @@ h2 {
   font-size: 2em; 
   text-align: left;
   margin-left: 2em;
+  text-decoration: underline;
+}
+
+.header_info_mobile {
+  font-family: airborne;
+  font-size: 1.8em; 
+  text-align: center;
+  margin-left: 0em;
+  text-decoration: none;
 }
 
 .mobile {
@@ -41,7 +51,7 @@ h2 {
 }
 
 .main-header {
-  margin-top: 175px;
+  margin-top: 100px;
 }
 
 p {
@@ -67,3 +77,21 @@ p {
   z-index: 1;
 }
 
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 1fr;
+  grid-gap: 1px 1px;
+  grid-template-areas: "image text";
+}
+
+.image { 
+  grid-area: image;
+  margin-top: 28px;
+}
+
+.text { 
+  grid-area: text;
+  text-align: justify;
+ }

@@ -1,18 +1,18 @@
 //node modules
 import React, { Component } from 'react';
-import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
+import HamBurgerNav from '../hamburger_nav/HamBurgerNav';
+
 
 //components
-import HamBurgerNav from '../HamBurgerNav';
 import WorkShelter from '../work_shelter/WorkShelter'
 
 //images
-import diagram from './Diagram_m.jpg';
-import bomb from './bomb.jpg';
-import chomp from './chomp.jpg';
-import glove from './glove.jpg';
-import vtech from './vtech.jpg';
+import diagram from './images/Diagram_m.jpg';
+import bomb from './images/bomb.jpg';
+import chomp from './images/chomp.jpg';
+import glove from './images/glove.jpg';
+import vtech from './images/vtech.jpg';
 let poop = glove;
 let planet = glove;
 
@@ -72,12 +72,12 @@ class MobileView extends Component {
                 <HamBurgerNav />
                 <h1 style={{marginTop: '2em'}} >Info</h1>
                 <section stlye={{textAlign: 'center'}} >
-                  <h2 style={{margin: '1em auto'}} >Why Elevated Protection?</h2>
+                  <h2 className="header_info_mobile" >Why Elevated Protection?</h2>
                     <div style={{width: '100%', margin: '0 auto'}} >
-                        <img src={diagram} width={window.screen.availWidth} height="auto" />
+                        <img src={diagram} width={window.innerWidth > 500 ? '440' : window.innerWidth} height="auto" alt="Diagram of ep mouthguard" />
                     </div>
                   <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}} >
-                    {data.map( (d, index) => <img key={index} src={d.url} height='30px' /> )}
+                    {data.map( (d, index) => <img key={index} src={d.url} height='30px' alt={d.title} /> )}
                   </div>
                 </section>
                   <br />
@@ -97,20 +97,13 @@ const TechFeatures = ({ data }) => {
   
   return (
     <div>
-      <h2 style={{margin: '1em auto'}} >Tech/Features</h2>
-      <div>
+      <h2 className="header_info_mobile" >Tech/Features</h2>
         {data.map((d, i) => (
-            <div style={{display: 'flex', flexWrap: 'wrap', padding: '1em'}} key={i} >
-            <Paper>
-                <div style={{display: 'flex'}} >
-                    <img src={d.url} height="100" width="105" />
-                    <h2 style={{width: '50%', fontSize: '1.2em'}} >{d.title}</h2>
-                </div>
-                <p style={{width: '100%'}} >{d.text}</p>
-                </Paper>
-            </div>
+              <div key={i} style={{ textAlign: 'center' }} >
+                <h2 style={{ fontSize: '1em', marginLeft: '0.5em'  }} >{d.title}</h2>
+                <p style={{fontSize: '1em'}} >{d.text}</p>
+              </div>
         ))}
-      </div>
     </div>
   )
 }

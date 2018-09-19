@@ -35,16 +35,16 @@ export default class WorkShelter extends Component {
 const WorkShelterButtonMode = ({ handleClickOpen, handleClose, open }) => (
   <div style={{display: 'flex', justifyContent: 'flex-end', marginRight: '2em', marginTop: '1em'}} >
     <p style={{marginRight: '1em'}} >Elevated Protection is proud to work with </p>
-    <img src={workShelter} height="100" width="100" onClick={handleClickOpen} />
+    <img src={workShelter} alt="Work + Shelter" height="100" width="100" onClick={handleClickOpen} />
     <Message open={open} handleClose={handleClose}  />
   </div>
 )
 
 const WorkShelterMessageMode = () => (
   <div style={{display: 'flex', justifyContent: 'center', marginTop: '1em', flexWrap: window.screen.availWidth > 430 ? 'nowrap' : 'wrap'}}>
-    <img src={workShelter} height="100" width="100" />
+    <img src={workShelter} alt="Work + Shelter" height="100" width="100" />
     <p style={{marginRight: '1em'}} >
-      "Work + Shelter is an ethical factory that employs impoverished women in New Delhi, India. By buying our products, you give our employees an economic agency that affords them more control and dignity in their lives."
+      "WORK + SHELTER is an ethical factory that employs impoverished women in New Delhi, India. By buying our products, you give our employees an economic agency that affords them more control and dignity in their lives."
     </p>
   </div>
 )
@@ -61,7 +61,7 @@ const Message = ({ open, handleClose }) => {
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             <p>
-               "Work + Shelter is an ethical factory that employs impoverished women in New Delhi, India. By buying our products, you give our employees an economic agency that affords them more control and dignity in their lives."
+               "WORK + SHELTER is an ethical factory that employs impoverished women in New Delhi, India. By buying our products, you give our employees an economic agency that affords them more control and dignity in their lives."
             </p>
           </DialogContentText>
         </DialogContent>

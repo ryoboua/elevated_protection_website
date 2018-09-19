@@ -24,12 +24,12 @@ const Nav = ({navOpacity}) => {
     const nav = (direction = 'column', opacity, fontSize) => (
         
         <div className="navStyle" style={ navStyle(direction, opacity)} >
-                {navOptions.map( item => (
+                {navOptions.map( (item, i) => (
                     
-                        <h1 key={item} style={ {...menuItems, fontSize } }>
-                        <Link style={{ textDecoration: 'none', color: 'white' }} to={item.url} >
-                            {item.title}
-                        </Link>
+                        <h1 key={i} style={ {...menuItems, fontSize } }>
+                            <Link style={{ textDecoration: 'none', color: 'white' }} to={item.url} >
+                                {item.title}
+                            </Link>
                         </h1>
                 ))}
         </div>

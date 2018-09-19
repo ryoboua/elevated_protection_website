@@ -7,9 +7,9 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from 'react-router-dom';
 
+import logo from './logo_icon.jpg';
 
-
-class HamBurgerNav extends Component {
+export default class HamBurgerNav extends Component {
     state = {
         anchorEl: null,
       };
@@ -41,6 +41,10 @@ class HamBurgerNav extends Component {
                                 aria-haspopup="true"
                             /> 
                         </IconButton>
+                        <Link style={{margin: 'auto', paddingRight:'3%'}} to="/" >
+                            <img src={logo} width="43" height="53" alt="Elevated Protection" />
+                        </Link>
+
                     </Toolbar>
                 </AppBar>
                 <Menu
@@ -48,12 +52,10 @@ class HamBurgerNav extends Component {
                   anchorEl={anchorEl}
                   open={Boolean(anchorEl)}
                   onClose={this.handleClose}
-                  disableAutoFocusItem="false"
                 >
                     {menuItems.map( (item, index) => ( 
-                            <Link style={{ textDecoration: 'none', color: 'black', borderStyle: 'none' }} to={item.url} >
+                            <Link key={index} style={{ textDecoration: 'none', color: 'black', borderStyle: 'none' }} to={item.url} >
                                 <MenuItem 
-                                key={index} 
                                 onClick={this.handleClose}
                                 >
                                     <p>{item.title}</p>
@@ -66,4 +68,3 @@ class HamBurgerNav extends Component {
         )
     }
 }
-export default HamBurgerNav;

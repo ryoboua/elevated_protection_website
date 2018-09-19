@@ -2,17 +2,17 @@
 import React, { Component } from 'react';
 import Divider from '@material-ui/core/Divider';
 import WorkShelter from '../work_shelter/WorkShelter'
-//components
-import HamBurgerNav from '../HamBurgerNav';
+import HamBurgerNav from '../hamburger_nav/HamBurgerNav';
+
 
 //images
-import diagram from './Diagram.jpg';
-import bomb from './bomb.jpg';
-import chomp from './chomp.jpg';
-import glove from './glove.jpg';
-import vtech from './vtech.jpg';
-import poop from './poop.png';
-import planet from './planet.png';
+import diagram from './images/Diagram_765.jpg';
+import bomb from './images/bomb.jpg';
+import chomp from './images/chomp.jpg';
+import glove from './images/glove.jpg';
+import vtech from './images/vtech.jpg';
+import poop from './images/poop.png';
+import planet from './images/planet.png';
 
 const text = {
   bomb: 'Hard Copolymer TPE coats the outer side of the mouthguard to offer the most proctection in high impact situations.',
@@ -65,6 +65,7 @@ const infoDesktopStyle = {
 class DesktopView extends Component {
     state = {
         open: false,
+        screenWidth: window.innerWidth,
       };
     
       handleClickOpen = () => {
@@ -74,19 +75,19 @@ class DesktopView extends Component {
       handleClose = () => {
         this.setState({ open: false });
       };
-
     render() {
+      console.log(this.state.screenWidth)
         return (
             <div style={infoDesktopStyle} >
                 <HamBurgerNav />
                 <h1 className="main-header" >Info</h1>
                 <section>
                   <h2>Why Elevated Protection?</h2>
-                  <div style={{width: window.screen.availWidth > 1441 ? '60%' : '70%', textAlign: "center", margin: '75px auto'}} >
-                    <img src={diagram} width="auto" height="420" />
+                  <div style={{textAlign: "center", margin: '55px auto'}} >
+                    <img src={diagram} alt="Mouthguard Diagram" width="765" height="auto" />
                   </div>
                   <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}} >
-                    {data.map( (d, index) => <img key={index} src={d.url} height='100px' /> )}
+                    {data.map( (d, index) => <img key={index} src={d.url} alt="" height='100px' /> )}
                   </div>
                 </section>
                   <br />
@@ -103,20 +104,22 @@ class DesktopView extends Component {
         )
     }
 }
-const TechFeatures = ({...props, data}) => {
+const TechFeatures = ({ data }) => {
   
   return (
     <div>
       <h2>Tech/Features</h2>
-      <ul>
         {data.map((d, i) => (
-            <li style={{display: 'flex', flexWrap: 'wrap'}} key={i} elevation="5" >
-              <img src={d.url} height="100" width="105" />
-              <h2 style={{width: '60%'}} >{d.title}</h2>
-              <p style={{width: '100%'}} >{d.text}</p>
-            </li>
+              <div key={i} className="grid-container">
+                <div className="image">
+                <img src={d.url} height="100" width="105" alt="" />
+                </div>
+                <div className="text" style={{}} >
+                <h2 style={{marginLeft: '0em'}} >{d.title}</h2>
+                <p style={{marginRight: '2em'}} >{d.text}</p>
+                </div>
+              </div>
         ))}
-      </ul>
     </div>
   )
 }

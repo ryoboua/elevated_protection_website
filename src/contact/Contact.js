@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import HamBurgerNav from '../HamBurgerNav';
+import HamBurgerNav from '../hamburger_nav/HamBurgerNav';
+
 
 const homePageStyle = { 
     margin: '0',
@@ -13,8 +14,8 @@ class Contact extends Component {
     render() {
         return (
             <div  style={ homePageStyle } >
+                <HamBurgerNav />
                 <div>
-                <HamBurgerNav/>
                     <h1 className="main-header" >Contact</h1>
                     <section>
                         <p>Elevated Protection Limited</p>

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
-import HamBurgerNav from '../HamBurgerNav';
 import Divider from '@material-ui/core/Divider';
+import HamBurgerNav from '../hamburger_nav/HamBurgerNav';
 import WorkShelter from '../work_shelter/WorkShelter'
+
 
 // images
 import SoftShell from './images/mobile/SoftShell.jpg'
@@ -72,18 +73,13 @@ const productMobileStyle = {
 }
 
 class MobileView extends Component {
-    // componentDidMount(){
-    //     window.onresize = () => {
-    //         console.log('im moving')
-    //     }
-    // }
     render() {
         return(
             <div style={ productMobileStyle }>
-                <HamBurgerNav/>
+                <HamBurgerNav />
                 <h1 style={{marginTop: '2em'}} >Products</h1>
                 <section>
-                    <h2 className="mobile" >Mouthguards</h2>
+                    <h2  className="mobile"  style={{textDecoration: 'none'}} >Mouthguards</h2>
                     <Carousel images={blackMouthguardImages} />
                     <br />
                     <br />
@@ -92,18 +88,18 @@ class MobileView extends Component {
                     <br />
                     <Divider />
                     <br />
-                    <h2 className="mobile" >Soft Shell Carrying Case</h2>
+                    <h2 className="mobile" style={{textDecoration: 'none'}} >Soft Shell Carrying Case</h2>
                     <br />
                     <br />
                     <div style={{width: '100%', margin: '0 auto'}} >
-                    {console.log(window.innerWidth)}
                         <img 
                           src={softShellImage.mobile} 
                           alt={softShellImage.title} 
                           srcSet={ `${softShellImage.mobile} 720w` }
-                          //if the viewport is 501px wide or wider, image width is 500px
+                          // if the viewport is 501px wide or wider, image width is 500px
                           // if the viewport width is 500px wide or less, image width will have device width.
-                          //When on a desktop window.innerWidth gets initialize 
+                          // when on a desktop window.innerWidth gets initialize to a value greater then 500 so I return 300px
+                          // mobile devices will return a value lower than 500px which should be the width of the device in px
                           sizes= {` 
                                 (min-width: 501px) 500px, 
                                 (max-width: 500px) ${window.innerWidth > 500 ? '300' : window.innerWidth}px,
@@ -112,7 +108,7 @@ class MobileView extends Component {
                         />
                     </div>
                     <WorkShelter />
-                    <h2 className="mobile" >Icon Tee</h2>
+                    <h2 className="mobile" style={{textDecoration: 'none'}} >Icon Tee</h2>
                     <br />
                     <br />
                     <div style={{width: '100%', margin: '0 auto'}} >
@@ -120,8 +116,6 @@ class MobileView extends Component {
                           src={T_ShirtImages.mobile}
                           alt={T_ShirtImages.title}
                           srcSet={ `${T_ShirtImages.mobile} 415w, ${T_ShirtImages.tablet} 518w` }
-                          //if the viewport is 501px wide or wider, image width is 500px
-                          // if the viewport width is 500px wide or less, image width will have device width
                           sizes={`
                                 (min-width: 501px) 500px, 
                                 (max-width: 500px) ${window.innerWidth > 500 ? '300' : window.innerWidth}px,
