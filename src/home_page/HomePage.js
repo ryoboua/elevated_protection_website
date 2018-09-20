@@ -25,7 +25,7 @@ class HomePage extends Component {
                       src={logo}
                       alt="Elevated Protection" 
                       srcSet={`${logoMobile} 318w, ${logo} 612w`}
-                      sizes="(max-width: 750px) 320px, (min-width: 768px) 346px"
+                      sizes="(max-width: 750px) 320px, (min-width: 751px) 346px"
                       onMouseEnter={() => this.setState({textOpacity: 0.75})}
                       onMouseLeave={() => this.setState({textOpacity: 0})}
                     />

@@ -35,7 +35,7 @@ export default class HamBurgerNav extends Component {
         return (
             <React.Fragment>
                 <AppBar style={{ backgroundColor: 'black'}} >
-                    <IconButton style={{paddingTop: '12px'}} IconButton color="inherit" aria-label="Menu" onClick={this.handleClick}>
+                    <IconButton style={{paddingTop: '12px'}} color="inherit" aria-label="Menu" onClick={this.handleClick}>
                         <MenuIcon
                             aria-owns={anchorEl ? 'simple-menu' : null}
                             aria-haspopup="true"

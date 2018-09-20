@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import HamBurgerNav from '../hamburger_nav/HamBurgerNav';
 
 class Contact extends Component {
+    componentDidMount(){
+        window.scrollTo(0, 0)
+      }
     render() {
         return (
             <div className="container">

@@ -1,6 +1,5 @@
 //node modules
 import React, { Component } from 'react';
-import Divider from '@material-ui/core/Divider';
 import WorkShelter from '../work_shelter/WorkShelter'
 import HamBurgerNav from '../hamburger_nav/HamBurgerNav';
 import Paper from '@material-ui/core/Paper';
@@ -60,6 +59,9 @@ class DesktopView extends Component {
         open: false,
         screenWidth: window.innerWidth,
       };
+      componentDidMount(){
+        window.scrollTo(0, 0)
+      }
     
       handleClickOpen = () => {
         this.setState({ open: true });
@@ -77,7 +79,7 @@ class DesktopView extends Component {
                   <Paper className="paper" elevation={12}>
                     <h2 className="secondary-header" >Why Elevated Protection?</h2>
                     <div className="diagram-image">
-                      <img src={diagram} alt="Mouthguard Diagram" width="765" height="auto" />
+                      <img src={diagram} alt="Mouthguard Diagram" width="600" height="auto" />
                     </div>
                   </Paper>
                 </section>

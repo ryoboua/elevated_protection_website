@@ -57,42 +57,32 @@ const data = [
   }
 ]
 
-const infoDesktopStyle = { 
-  margin: '0',
-  height: '100%',
-  padding: '0', 
-  width: '100%', 
-  background: 'white',
-  textAlign: 'center',
-}
 class MobileView extends Component {
-
-    render() {
-        return (
-            <div className="container">
-                <HamBurgerNav />
-                <h1 className="main-header-mobile">Info</h1>
-                <section>
-                  <h2 className="header_info_mobile" >Why Elevated Protection?</h2>
-                    <div className="diagram-image-mobile" >
-                        <img src={diagram} width={window.innerWidth > 500 ? '440' : window.innerWidth} height="auto" alt="Diagram of ep mouthguard" />
-                    </div>
-                  {/* <div className="single-line">
-                    {data.map( (d, index) => <img key={index} src={d.url} height='30px' alt={d.title} /> )}
-                  </div> */}
-                </section>
-                  {/* <br /> */}
-                  <Divider />
-                  <br />
-                <section>
-                  <TechFeatures data={data} />
-                </section>
-                <section>
-                  <WorkShelter buttonMode />
-                </section>
-            </div>
-        )
-    }
+  componentDidMount(){
+    window.scrollTo(0, 0)
+  }
+  render() {
+      return (
+          <div className="container">
+              <HamBurgerNav />
+              <h1 className="main-header-mobile">Info</h1>
+              <section>
+                <h2 className="header_info_mobile" >Why Elevated Protection?</h2>
+                  <div className="diagram-image-mobile" >
+                      <img src={diagram} width={window.innerWidth > 500 ? '440' : window.innerWidth} height="auto" alt="Diagram of ep mouthguard" />
+                  </div>
+              </section>
+                <Divider />
+                <br />
+              <section>
+                <TechFeatures data={data} />
+              </section>
+              <section>
+                <WorkShelter buttonMode />
+              </section>
+          </div>
+      )
+  }
 }
 const TechFeatures = ({ data }) => {
   
@@ -100,7 +90,7 @@ const TechFeatures = ({ data }) => {
     <div>
       <h2 className="header_info_mobile" >Tech/Features</h2>
         {data.map((d, i) => (
-              <div className="textAlignCenter" key={i}>
+              <div className="tech-feature-content" key={i}>
                 <h2 className="sub-header-mobile">{d.title}</h2>
                 <p className="fontSize">{d.text}</p>
               </div>

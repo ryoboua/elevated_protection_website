@@ -30,13 +30,16 @@
     margin-right: 2em;
 }
 
-.textAlignCenter {
-    text-align: center;
+.tech-feature-content {
+    text-align: justify;
+    margin: 0 0.5em;
 }
 
 .sub-header-mobile {
     font-size: 1em;
     margin-left: 0.5em;
+    text-align: left;
+    text-decoration: underline;
 }
 .fontSize {
     font-size: 1em;
