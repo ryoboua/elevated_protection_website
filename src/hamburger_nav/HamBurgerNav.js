@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+
 import { Link } from 'react-router-dom';
 
 import logo from './logo_icon.jpg';
@@ -33,20 +33,17 @@ export default class HamBurgerNav extends Component {
         const { anchorEl } = this.state;
 
         return (
-            <div>
-                <AppBar className="appbar">
-                    <Toolbar className="appbar" >
-                        <IconButton color="inherit" aria-label="Menu" onClick={this.handleClick}>
-                            <MenuIcon
-                                aria-owns={anchorEl ? 'simple-menu' : null}
-                                aria-haspopup="true"
-                            /> 
-                        </IconButton>
-                        <Link className="icon" to="/" >
-                            <img src={logo} width="43" height="53" alt="Elevated Protection" />
-                        </Link>
-
-                    </Toolbar>
+            <React.Fragment>
+                <AppBar style={{ backgroundColor: 'black'}} >
+                    <IconButton style={{paddingTop: '12px'}} IconButton color="inherit" aria-label="Menu" onClick={this.handleClick}>
+                        <MenuIcon
+                            aria-owns={anchorEl ? 'simple-menu' : null}
+                            aria-haspopup="true"
+                        /> 
+                    </IconButton>
+                    <Link className="icon" to="/" >
+                        <img src={logo} width="43" height="53" alt="Elevated Protection" />
+                    </Link>
                 </AppBar>
                 <Menu
                   id="simple-menu"
@@ -63,7 +60,7 @@ export default class HamBurgerNav extends Component {
                                 </MenuItem>
                             </Link>))}
                 </Menu>
-            </div>
+            </React.Fragment>
         )
     }
 }

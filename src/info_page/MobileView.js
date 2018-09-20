@@ -77,11 +77,11 @@ class MobileView extends Component {
                     <div className="diagram-image-mobile" >
                         <img src={diagram} width={window.innerWidth > 500 ? '440' : window.innerWidth} height="auto" alt="Diagram of ep mouthguard" />
                     </div>
-                  <div className="single-line">
+                  {/* <div className="single-line">
                     {data.map( (d, index) => <img key={index} src={d.url} height='30px' alt={d.title} /> )}
-                  </div>
+                  </div> */}
                 </section>
-                  <br />
+                  {/* <br /> */}
                   <Divider />
                   <br />
                 <section>

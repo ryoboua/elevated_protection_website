@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Divider from '@material-ui/core/Divider';
 import WorkShelter from '../work_shelter/WorkShelter'
 import HamBurgerNav from '../hamburger_nav/HamBurgerNav';
+import Paper from '@material-ui/core/Paper';
 
 
 //images
@@ -73,30 +74,30 @@ class DesktopView extends Component {
                 <HamBurgerNav />
                 <h1 className="main-header" >Info</h1>
                 <section>
-                  <h2 className="secondary-header" >Why Elevated Protection?</h2>
-                  <div className="diagram-image">
-                    <img src={diagram} alt="Mouthguard Diagram" width="765" height="auto" />
-                  </div>
-                  <div className="single-line">
-                    {data.map( (d, index) => <img key={index} src={d.url} alt="" height='100px' /> )}
-                  </div>
+                  <Paper className="paper" elevation={12}>
+                    <h2 className="secondary-header" >Why Elevated Protection?</h2>
+                    <div className="diagram-image">
+                      <img src={diagram} alt="Mouthguard Diagram" width="765" height="auto" />
+                    </div>
+                  </Paper>
                 </section>
                   <br />
-                  <Divider />
                   <br />
                 <section>
+                <Paper className="paper" elevation={12}>
                   <TechFeatures data={data} />
+                </Paper>
                 </section>
+                <br />
+                <br />
                 <section>
                   <WorkShelter buttonMode />
                 </section>
-
             </div>
         )
     }
 }
 const TechFeatures = ({ data }) => {
-  
   return (
     <div>
       <h2 className="secondary-header" >Tech/Features</h2>

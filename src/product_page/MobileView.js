@@ -95,6 +95,9 @@ class MobileView extends Component {
                         />
                     </div>
                     <WorkShelter />
+                    <br />
+                    <Divider />
+                    <br />
                     <h1 className="secondary-header-mobile">Icon Tee</h1>
                     <br />
                     <br />
