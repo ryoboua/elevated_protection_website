@@ -3,7 +3,11 @@
 # dependencies
 /node_modules
 
-/public
+# testing
+/coverage
+
+# production
+/build
 
 # images and fonts
 *.jpg
@@ -11,12 +15,8 @@
 *.png
 /src/fonts
 
-# testing
-/coverage
-
 # misc
 .DS_Store
-.env
 .env.local
 .env.development.local
 .env.test.local
