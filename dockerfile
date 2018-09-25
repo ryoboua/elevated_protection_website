@@ -1,5 +1,6 @@
 FROM node:8
 
+# Create working directory
 WORKDIR /website
 
 # Install app dependencies

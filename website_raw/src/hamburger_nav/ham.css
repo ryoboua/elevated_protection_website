@@ -1,6 +1,12 @@
-.icon {
-    margin: -43px auto 0;
-    width: 53px;
+.Banner-Link {
+    margin: -48px auto 4px;
+    width: auto;
+    color: white;
+}
+
+.Banner-Title {
+    font-family: airborne;
+    color: white;
 }
 
 .ham-link {

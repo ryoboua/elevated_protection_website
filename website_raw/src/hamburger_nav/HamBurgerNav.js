@@ -41,8 +41,8 @@ export default class HamBurgerNav extends Component {
                             aria-haspopup="true"
                         /> 
                     </IconButton>
-                    <Link className="icon" to="/" >
-                        <img src={logo} width="43" height="53" alt="Elevated Protection" />
+                    <Link className="Banner-Link" to="/" >
+                        <h3 className="Banner-Title">ELEVATED PROTECTION</h3>
                     </Link>
                 </AppBar>
                 <Menu
