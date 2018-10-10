@@ -117,11 +117,6 @@ class MobileView extends Component {
                         />
                     </div>
                 </section>
-                {/* <section className="address">
-                    <p>Elevated Protection Limited</p>
-                    <p>2 Rolland Rd., Toronto, ON Canada M4G 1V5</p>
-                    <p>info@elevatedprotection.ca</p>
-                </section> */}
             </div>
         )
     }
