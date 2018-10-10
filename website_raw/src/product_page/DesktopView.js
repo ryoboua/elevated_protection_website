@@ -75,11 +75,6 @@ class DesktopView extends Component {
                         </div>
                     </section>
                     <br />
-                    {/* <section>
-                        <p>Elevated Protection Limited</p>
-                        <p>2 Rolland Rd., Toronto, ON Canada M4G 1V5</p>
-                        <p>info@elevatedprotection.ca</p>
-                    </section> */}
             </div>
         )
     }
