@@ -28,31 +28,62 @@ const data = [
     title: 'Bomb - Proof',
     url: bomb,
     text: text.bomb,
+    height: '82.5',
+    width: '82.5',
   },
   {
     title: 'Fits Like a Glove',
     url: glove,
     text: text.glove,
+    height: '82.5',
+    width: '82.5',
   },
   {
     title: 'V - Tech',
     url: vtech,
     text: text.vtech,
+    height: '82.5',
+    width: '82.5',
   },
   {
     title: 'Chomp Pads',
     url: chomp,
     text: text.chomp,
+    height: '82.5',
+    width: '82.5',
   },{
     title: 'No B.S.!',
     url: poop,
     text: text.poop,
+    height: '100',
+    width: '100',
   },{
     title: 'Ethically Sourced and Designed in Canada',
     url: planet,
-    text: text.planet
+    text: text.planet,
+    height: '100',
+    width: '100',
   }
 ]
+
+const TechFeatures = ({ data }) => {
+  return (
+    <div>
+      <h2 className="secondary-header" >Tech/Features</h2>
+        {data.map((d, i) => (
+              <div key={i} className="grid-container">
+                <div className="image">
+                <img src={d.url} height={d.height} width={d.width} alt="" />
+                </div>
+                <div className="text">
+                  <h2 className="underline">{d.title}</h2>
+                  <p className="marginRight2em">{d.text}</p>
+                </div>
+              </div>
+        ))}
+    </div>
+  )
+}
 
 class DesktopView extends Component {
     state = {
@@ -99,23 +130,5 @@ class DesktopView extends Component {
         )
     }
 }
-const TechFeatures = ({ data }) => {
-  return (
-    <div>
-      <h2 className="secondary-header" >Tech/Features</h2>
-        {data.map((d, i) => (
-              <div key={i} className="grid-container">
-                <div className="image">
-                <img src={d.url} height="100" width="105" alt="" />
-                </div>
-                <div className="text">
-                  <h2 className="underline">{d.title}</h2>
-                  <p className="marginRight2em">{d.text}</p>
-                </div>
-              </div>
-        ))}
-    </div>
-  )
-}
 
-export default DesktopView;
+export default DesktopView
