@@ -21,7 +21,7 @@ export default class HamBurgerNav extends Component {
     
       handleClose = () => {
         this.setState({ anchorEl: null });
-      };
+      }; 
 
     render() {
         const menuItems = [
@@ -35,14 +35,14 @@ export default class HamBurgerNav extends Component {
         return (
             <React.Fragment>
                 <AppBar style={{ backgroundColor: 'black'}} >
-                    <IconButton style={{paddingTop: '12px'}} color="inherit" aria-label="Menu" onClick={this.handleClick}>
+                    <IconButton style={{paddingTop: '37.5px'}} color="inherit" aria-label="Menu" onClick={this.handleClick}>
                         <MenuIcon
                             aria-owns={anchorEl ? 'simple-menu' : null}
                             aria-haspopup="true"
                         /> 
                     </IconButton>
                     <Link className="Banner-Link" to="/" >
-                        <h3 className="Banner-Title">ELEVATED PROTECTION</h3>
+                        <h1 className="Banner-Title">ELEVATED PROTECTION</h1>
                     </Link>
                 </AppBar>
                 <Menu
