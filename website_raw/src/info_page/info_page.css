@@ -54,12 +54,17 @@
     grid-template-areas: "image text";
   }
   
-  .image { 
+.image { 
+grid-area: image;
+margin-top: 28px;
+}
+
+.text { 
+grid-area: text;
+text-align: justify;
+}
+
+.image-mobile-info { 
     grid-area: image;
-    margin-top: 28px;
+    margin-top: 0px;
   }
-  
-  .text { 
-    grid-area: text;
-    text-align: justify;
-   }
