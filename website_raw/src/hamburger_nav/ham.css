@@ -1,6 +1,9 @@
+.app-bar-style {
+    background-color: black;
+}
+
 .Banner-Link {
-    margin: -48px auto 4px;
-    width: auto;
+    margin: 0 auto;
     color: white;
     text-decoration: none;
 }
@@ -9,10 +12,25 @@
     font-family: airborne;
     color: white;
     text-decoration: none;
+    font-size: 2.4em;
+    text-align: center;
+    margin-right: 42px;
+
 }
 
 .ham-link {
     text-decoration: none;
     color: black;
     border-style: none;
+}
+
+@media (max-width: 750px) {
+    .Banner-Title {
+        font-size: 1.6em;
+        margin-right: 0px;
+    }
+
+    .app-bar-style {
+        margin-bottom: 1em;
+    }
 }
