@@ -6,9 +6,10 @@
 }
 
 .menu-item {
-    padding: 0 1em;
+    padding: 0 0.5em;
     color: white;
-    text-decoration: none; 
+    text-decoration: none;
+    width: 205px; 
 }
 
 
