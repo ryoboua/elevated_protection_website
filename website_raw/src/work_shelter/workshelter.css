@@ -1,15 +1,8 @@
-.button-mode {
+.worker-shelter-wrapper {
     display: flex;
     justify-content: flex-end;
     margin-right: 2em;
     margin-top: 1em;
-}
-
-.message-mode {
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
-    margin-left: 1.6%;
 }
 
 .work-p {
