@@ -19,7 +19,7 @@ class HomePage extends Component {
 
     render() {
         return (
-            <div className="container_homepage">
+            <div className="container_homepage" style={{ textAlign: "center" }} >
                     <img 
                       className="logo"
                       src={logo}
@@ -29,6 +29,7 @@ class HomePage extends Component {
                       onMouseEnter={() => this.setState({textOpacity: 0.75})}
                       onMouseLeave={() => this.setState({textOpacity: 0})}
                     />
+                {/* //TODO center Nav */}
                 <Nav navOpacity={this.state.navOpacity} />
                 <br />
                 <p className="slogan" style={{ opacity: this.state.textOpacity }}>
