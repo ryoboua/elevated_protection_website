@@ -4,10 +4,12 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import Toolbar from '@material-ui/core/Toolbar';
+import Media from "react-media";
+
 
 import { Link } from 'react-router-dom';
 
-import logo from './logo_icon.jpg';
 import './ham.css';
 
 export default class HamBurgerNav extends Component {
@@ -34,16 +36,20 @@ export default class HamBurgerNav extends Component {
 
         return (
             <React.Fragment>
-                <AppBar style={{ backgroundColor: 'black'}} >
-                    <IconButton style={{paddingTop: '37.5px'}} color="inherit" aria-label="Menu" onClick={this.handleClick}>
-                        <MenuIcon
-                            aria-owns={anchorEl ? 'simple-menu' : null}
-                            aria-haspopup="true"
-                        /> 
-                    </IconButton>
-                    <Link className="Banner-Link" to="/" >
-                        <h1 className="Banner-Title">ELEVATED PROTECTION</h1>
-                    </Link>
+                <AppBar className="app-bar-style" style={{ backgroundColor: 'black'}} >
+                    <Toolbar>
+                        <IconButton className="ham-menu-button" color="inherit" aria-label="Menu" onClick={this.handleClick}>
+                            <MenuIcon
+                                aria-owns={anchorEl ? 'simple-menu' : null}
+                                aria-haspopup="true"
+                            /> 
+                        </IconButton>
+                        <div style={{margin: '0 auto'}} >
+                            <Link className="Banner-Link" to="/" >
+                            <h1 className="Banner-Title">ELEVATED PROTECTION</h1>
+                            </Link>
+                        </div>
+                    </Toolbar>
                 </AppBar>
                 <Menu
                   id="simple-menu"
