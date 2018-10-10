@@ -26,7 +26,6 @@ export default class WorkShelter extends Component {
         this.setState({ open: false });
       };
     render(){
-      const { open } = this.state
         return (
           <div className="worker-shelter-wrapper">
             <p className="work-p">Elevated Protection is proud to work with </p>
@@ -49,9 +48,7 @@ const Message = ({ open, handleClose }) => {
         <DialogTitle id="alert-dialog-title"><p>Work + Shelter and Elevated Protection</p></DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            <p>
                "WORK + SHELTER is an ethical factory that employs impoverished women in New Delhi, India. By buying our products, you give our employees an economic agency that affords them more control and dignity in their lives."
-            </p>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
