@@ -26,30 +26,17 @@ export default class WorkShelter extends Component {
         this.setState({ open: false });
       };
     render(){
-        return this.props.buttonMode ? 
-                    <WorkShelterButtonMode open={this.state.open} handleClickOpen={this.handleClickOpen} handleClose={this.handleClose}  /> 
-                    : 
-                    <WorkShelterMessageMode />
+      const { open } = this.state
+        return (
+          <div className="worker-shelter-wrapper">
+            <p className="work-p">Elevated Protection is proud to work with </p>
+            <img src={workShelter} alt="Work + Shelter" height="100" width="100" onClick={this.handleClickOpen} />
+            <Message open={this.state.open} handleClose={this.handleClose}  />
+          </div>
+        ) 
         
     }     
 }
-
-const WorkShelterButtonMode = ({ handleClickOpen, handleClose, open }) => (
-  <div className="button-mode">
-    <p className="work-p">Elevated Protection is proud to work with </p>
-    <img src={workShelter} alt="Work + Shelter" height="100" width="100" onClick={handleClickOpen} />
-    <Message open={open} handleClose={handleClose}  />
-  </div>
-)
-
-const WorkShelterMessageMode = () => (
-  <div className="message-mode" style={{ flexWrap: window.screen.availWidth > 430 ? 'nowrap' : 'wrap' }}>
-    <img src={workShelter} alt="Work + Shelter" height="100" width="100" />
-    <p className="work-p">
-      "WORK + SHELTER is an ethical factory that employs impoverished women in New Delhi, India. By buying our products, you give our employees an economic agency that affords them more control and dignity in their lives."
-    </p>
-  </div>
-)
 
 const Message = ({ open, handleClose }) => {
     return (
