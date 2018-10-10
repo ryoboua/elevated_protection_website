@@ -93,7 +93,7 @@ class DesktopView extends Component {
                 <br />
                 <br />
                 <section>
-                  <WorkShelter buttonMode />
+                  <WorkShelter />
                 </section>
             </div>
         )
