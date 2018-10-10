@@ -31,31 +31,61 @@ const data = [
     title: 'Bomb - Proof',
     url: bomb,
     text: text.bomb,
+    height: '50',
+    width: '50',
   },
   {
     title: 'Fits Like a Glove',
     url: glove,
     text: text.glove,
+    height: '50',
+    width: '50',
   },
   {
     title: 'V - Tech',
     url: vtech,
     text: text.vtech,
+    height: '50',
+    width: '50',
   },
   {
     title: 'Chomp Pads',
     url: chomp,
     text: text.chomp,
+    height: '50',
+    width: '50',
   },{
     title: 'No B.S.!',
     url: poop,
     text: text.poop,
+    height: '60',
+    width: '55',
   },{
     title: 'Ethically Sourced and Designed in Canada',
     url: planet,
-    text: text.planet
+    text: text.planet,
+    height: '60',
+    width: '55',
   }
 ]
+
+const TechFeatures = ({ data }) => (
+    <div>
+      <h2 className="header_info_mobile" >Tech/Features</h2>
+        {data.map((d, i) => (
+          <div key={i}>
+            <div style={{ display: 'flex', paddingLeft: '1em' }} >
+            <img src={d.url} height={d.height} width={d.width} alt="" />
+              <h2 className="sub-header-mobile">{d.title}</h2>
+            </div>
+            <div style={{ padding: '0 1em' }} >
+              <p className="fontSize">{d.text}</p>
+            </div>
+          </div>
+        ))}
+    </div>
+)
+
 
 class MobileView extends Component {
   componentDidMount(){
@@ -84,18 +114,5 @@ class MobileView extends Component {
       )
   }
 }
-const TechFeatures = ({ data }) => {
-  
-  return (
-    <div>
-      <h2 className="header_info_mobile" >Tech/Features</h2>
-        {data.map((d, i) => (
-              <div className="tech-feature-content" key={i}>
-                <h2 className="sub-header-mobile">{d.title}</h2>
-                <p className="fontSize">{d.text}</p>
-              </div>
-        ))}
-    </div>
-  )
-}
-export default MobileView;
+
+export default MobileView
