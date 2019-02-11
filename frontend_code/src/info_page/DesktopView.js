@@ -1,6 +1,5 @@
 //node modules
 import React, { Component } from 'react';
-import WorkShelter from '../work_shelter/WorkShelter'
 import HamBurgerNav from '../hamburger_nav/HamBurgerNav';
 import Paper from '@material-ui/core/Paper';
 
@@ -13,6 +12,7 @@ import glove from './images/glove.jpg';
 import vtech from './images/vtech.jpg';
 import poop from './images/poop.png';
 import planet from './images/planet.png';
+import workShelter from './work_shelter.jpg'
 
 const text = {
   bomb: 'Hard Copolymer TPE coats the outer side of the mouthguard to offer the most proctection in high impact situations.',
@@ -124,7 +124,13 @@ class DesktopView extends Component {
                 <br />
                 <br />
                 <section>
-                  <WorkShelter />
+                  <Paper className="paper" elevation={12}>
+                    <h1 style={{ textDecoration: 'none', textAlign: 'left'}} >Why Elevated Protection?</h1>
+                    <div style={{ display: 'flex'}}>
+                        <img style={{ padding: '0 1em'}} src={workShelter} alt="Work + Shelter" height="100" width="100"/>
+                        <h1 style={{fontSize: '24px', padding: '0 1em'}}>"WORK + SHELTER is an ethical factory that employs impoverished women in New Delhi, India. By buying our products, you give our employees an economic agency that affords them more control and dignity in their lives."</h1>  
+                    </div>
+                  </Paper>
                 </section>
             </div>
         )

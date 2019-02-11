@@ -6,23 +6,45 @@ import WorkShelter from '../work_shelter/WorkShelter'
 
 // images
 import SoftShell from './images/mobile/SoftShell.jpg'
+import classicHoodie from './images/mobile/classic_hoodie_m.jpg'
+import iconHoodie from './images/mobile/icon_hoodie_m.jpg'
+import sealJacket from './images/mobile/seal_jacket_m.jpg'
+import YG1 from './images/youth_guard_side.jpg';
+import YG2 from './images/youth_guard.jpg';
+
 
 // images - mobile
-import GB1M from './images/mobile/EP_ClassicGuard_Black1_m.jpg';
-import GB2M from './images/mobile/EP_ClassicGuard_Black2_m.jpg';
-import GW1M from './images/mobile/EP_ClassicGuard_White1_m.jpg';
-import GW2M from './images/mobile/EP_ClassicGuard_White2_m.jpg';
+import GB1M from './images/black_guard_side.jpg';
+import GB2M from './images/black_guard.jpg';
+import GW1M from './images/white_guard_side.jpg'
+import GW2M from './images/white_guard.jpg';
 import Tees_M from './images/mobile/EP_ClassicTees_SlantStack_m.jpg'
 
 //image - tablet
 
-import GB1T from './images/mobile/EP_ClassicGuard_Black1_768.jpg';
-import GB2T from './images/mobile/EP_ClassicGuard_Black2_768.jpg';
-import GW1T from './images/mobile/EP_ClassicGuard_White1_768.jpg';
-import GW2T from './images/mobile/EP_ClassicGuard_White2_768.jpg';
+import GB1T from './images/black_guard_side.jpg';
+import GB2T from './images/black_guard.jpg';
+import GW1T from './images/white_guard_side.jpg'
+import GW2T from './images/white_guard.jpg'
 import Tees_T from './images/mobile/EP_ClassicTees_SlantStack_500.jpg'
 
 // image variables
+
+const classicHoodieImage = {
+    title: 'classic black hoodie with elevated protection logo',
+    url: classicHoodie
+}
+
+const iconHoodieImage = {
+    title: 'Icon Hoodie',
+    url: iconHoodie
+}
+
+const sealJacketImage = {
+    title: 'Seal Jacket',
+    url: sealJacket
+}
+
 const blackMouthguardImages = [
     {
         title: 'Black Mouthguard Front View',
@@ -45,6 +67,18 @@ const whiteMouthgaurdImages = [
         title:'White Mouthguard Side View',
         mobile: GW1M,
         tablet: GW1T
+    }
+]
+const YouthMouthgaurdImages = [
+    {
+        title: 'White Mouthguard Front View',
+        mobile: YG2,
+        tablet: YG2
+    },
+    {
+        title:'White Mouthguard Side View',
+        mobile: YG1,
+        tablet: YG1
     }
 ]
 
@@ -75,6 +109,60 @@ class MobileView extends Component {
                     <br />
                     <Carousel images={whiteMouthgaurdImages} />
                     <br />
+                    <br />
+                    <h1 className="secondary-header-mobile">Youth Mouthguards</h1>
+                    <Carousel images={YouthMouthgaurdImages} />
+                    <br />
+                    <Divider />
+                    <br />
+                    <h1 className="secondary-header-mobile">Classic Hoodie</h1>
+                    <br />
+                    <br />
+                    <div className="mobile-image-container">
+                        <img 
+                          src={classicHoodieImage.url}
+                          alt={classicHoodieImage.title}
+                          srcSet={ `${classicHoodieImage.url} 415w, ${classicHoodieImage.url} 518w` }
+                          sizes={`
+                                (min-width: 501px) 500px, 
+                                (max-width: 500px) ${window.innerWidth > 500 ? '300' : window.innerWidth}px,
+                                `}
+                          height="auto"                         />
+                    </div>
+                    <br />
+                    <Divider />
+                    <br />
+                    <h1 className="secondary-header-mobile">Icon Hoodie</h1>
+                    <br />
+                    <br />
+                    <div className="mobile-image-container">
+                        <img 
+                          src={iconHoodieImage.url}
+                          alt={iconHoodieImage.title}
+                          srcSet={ `${iconHoodieImage.url} 415w, ${iconHoodieImage.url} 518w` }
+                          sizes={`
+                                (min-width: 501px) 500px, 
+                                (max-width: 500px) ${window.innerWidth > 500 ? '300' : window.innerWidth}px,
+                                `}
+                          height="auto"                         />
+                    </div>
+                    <br />
+                    <Divider />
+                    <br />
+                    <h1 className="secondary-header-mobile">Seal Jacket</h1>
+                    <br />
+                    <br />
+                    <div className="mobile-image-container">
+                        <img 
+                          src={sealJacketImage.url}
+                          alt={sealJacketImage.title}
+                          srcSet={ `${sealJacketImage.url} 415w, ${sealJacketImage.url} 518w` }
+                          sizes={`
+                                (min-width: 501px) 500px, 
+                                (max-width: 500px) ${window.innerWidth > 500 ? '300' : window.innerWidth}px,
+                                `}
+                          height="auto"                         />
+                    </div>
                     <br />
                     <Divider />
                     <br />

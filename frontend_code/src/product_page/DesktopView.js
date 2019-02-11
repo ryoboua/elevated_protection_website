@@ -6,14 +6,34 @@ import HamBurgerNav from '../hamburger_nav/HamBurgerNav';
 import WorkShelter from '../work_shelter/WorkShelter'
 
 // images
-import GB1 from './images/desktop/EP_ClassicGuard_Black1_1080.jpg';
-import GB2 from './images/desktop/EP_ClassicGuard_Black2_1080.jpg';
-import GW1 from './images/desktop/EP_ClassicGuard_White1_1080.jpg';
-import GW2 from './images/desktop/EP_ClassicGuard_White2_1080.jpg';
+import GB1 from './images/black_guard_side.jpg';
+import GB2 from './images/black_guard.jpg';
+import GW1 from './images/white_guard_side.jpg';
+import GW2 from './images/white_guard.jpg';
+import YG1 from './images/youth_guard_side.jpg';
+import YG2 from './images/youth_guard.jpg';
+import classicHoodie from './images/classic_hoodie.jpg'
+import iconHoodie from './images/icon_hoodie.jpg'
+import sealJacket from './images/seal_jacket.jpg'
 import Tees from './images/desktop/EP_ClassicTees_SlantStack_800.jpg';
 import SoftShell from './images/desktop/SoftShell.jpg';
 
 // image variables
+
+const classicHoodieImage = {
+    title: 'classic black hoodie with elevated protection logo',
+    url: classicHoodie
+}
+
+const iconHoodieImage = {
+    title: 'Icon Hoodie',
+    url: iconHoodie
+}
+
+const sealJacketImage = {
+    title: 'Seal Jacket',
+    url: sealJacket
+}
 const blackMouthguardImages = [
     {
         title: 'Black Mouthguard Front View',
@@ -32,6 +52,18 @@ const whiteMouthgaurdImages = [
     {
         title:'White Mouthguard Side View',
         url: GW1,
+    }
+]
+
+const youthGuardIamges = [ 
+    {
+        title: 'Youth Mouthgaurd Front View',
+        url: YG2,
+
+    },
+    {
+        title: 'Youth Mouthguard Side View',
+        url: YG1,
     }
 ]
 
@@ -57,7 +89,36 @@ class DesktopView extends Component {
                     <section>
                         <h2 className="secondary-header">Mouthguards</h2>
                         <Carousel images={blackMouthguardImages} />
+                        <br />
+                        <Divider />
+                        <br />
                         <Carousel images={whiteMouthgaurdImages} />
+                        <br />
+                        <Divider />
+                        <br />
+                        <h2 className="secondary-header">Youth Mouthguard</h2>
+                        <Carousel images={youthGuardIamges} />
+                        <br />
+                        <Divider />
+                        <br />
+                        <h2 className="secondary-header">Classic Hoodie</h2>
+                        <div className="">
+                            <img src={classicHoodieImage.url} width="800" height="auto" alt={classicHoodieImage.title} />
+                        </div>
+                        <br />
+                        <Divider />
+                        <br />
+                        <h2 className="secondary-header">Icon Hoodie</h2>
+                        <div className="">
+                            <img src={iconHoodieImage.url} width="800" height="auto" alt={iconHoodieImage.title} />
+                        </div>
+                        <br />
+                        <Divider />
+                        <br />
+                        <h2 className="secondary-header">Seal Jacket</h2>
+                        <div className="">
+                            <img src={sealJacketImage.url} width="800" height="auto" alt={sealJacketImage.title} />
+                        </div>
                         <br />
                         <Divider />
                         <br />
@@ -86,11 +147,15 @@ const Carousel = ({ images }) => {
         const settings = {
             dots: true,
             infinite: true,
-            speed: 2000,
+            speed: 4000,
             slidesToShow: 1,
             slidesToScroll: 1,
-            autoplay: false,
-            arrows: true,
+            autoplay: true,
+            arrows: false,
+            pauseOnDotsHover: true,
+            pauseOnFocus: true,
+            pauseOnHover: false,
+
         }
         return (
             <div className="slider-container" style={{ width }} >
